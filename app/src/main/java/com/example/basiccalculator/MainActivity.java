@@ -9,22 +9,33 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    Button button,button2;
+    Button add,sub,mul,div;
 
     TextView textView;
-    EditText editText;
+    EditText editText,editText2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = findViewById(R.id.btnId);
-        button2 = findViewById(R.id.btnId2);
+        add = findViewById(R.id.addbtn);
+        sub = findViewById(R.id.subbtn);
+        mul = findViewById(R.id.mulbtn);
+        div = findViewById(R.id.divbtn);
+
 
         textView = findViewById(R.id.textViewId);
         editText= findViewById(R.id.editTextId);
-        button.setOnClickListener(this);
-        button2.setOnClickListener(this);
+        editText2 = findViewById(R.id.editTextId2);
+
+
+        add.setOnClickListener(this);
+        sub.setOnClickListener(this);
+        mul.setOnClickListener(this);
+        div.setOnClickListener(this);
+
+
+
 
 
 
@@ -38,12 +49,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-
+    double num1, num2,total;
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.btnId) {
 
-        } else if (view.getId() == R.id.btnId2) {
+    public void onClick(View view) {
+        if (view.getId() == R.id.addbtn) {
+            num1=Double.parseDouble(editText.getText().toString());
+            num2=Double.parseDouble(editText2.getText().toString());
+            total = num1+num2;
+            textView.setText(String.valueOf(total));
+
+        } else if (view.getId() == R.id.subbtn) {
+            num1=Double.parseDouble(editText.getText().toString());
+            num2=Double.parseDouble(editText2.getText().toString());
+            total = num1-num2;
+            textView.setText(String.valueOf(total));
+
+        }else if (view.getId()==R.id.mulbtn){
+            num1=Double.parseDouble(editText.getText().toString());
+            num2=Double.parseDouble(editText2.getText().toString());
+            total = num1*num2;
+            textView.setText(String.valueOf(total));
+
+        }else if (view.getId()==R.id.divbtn){
+            num1=Double.parseDouble(editText.getText().toString());
+            num2=Double.parseDouble(editText2.getText().toString());
+            total = num1/num2;
+            textView.setText(String.valueOf(total));
 
         }
     }

@@ -38,7 +38,7 @@
         <Button
             android:layout_marginLeft="10dp"
             android:onClick="submit"
-            android:id="@+id/btnId"
+            android:id="@+id/addbtn"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:text="+"
@@ -49,7 +49,7 @@
         <Button
             android:layout_marginLeft="10dp"
             android:onClick="submit"
-            android:id="@+id/btnId2"
+            android:id="@+id/subbtn"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:text="-"
@@ -61,7 +61,7 @@
         <Button
             android:layout_marginLeft="10dp"
             android:onClick="submit"
-            android:id="@+id/btnId3"
+            android:id="@+id/mulbtn"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:text="*"
@@ -72,7 +72,7 @@
         <Button
             android:layout_marginLeft="10dp"
             android:onClick="submit"
-            android:id="@+id/btnId4"
+            android:id="@+id/divbtn"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:text="/"
